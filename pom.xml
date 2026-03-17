@@ -11,7 +11,7 @@
 
     <groupId>com.customer.schema.avro</groupId>
     <artifactId>customer-schema-avro</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1.RELEASE</version>
     <packaging>jar</packaging>
 
 
@@ -51,6 +51,20 @@
             <groupId>org.apache.avro</groupId>
             <artifactId>avro-tools</artifactId>
             <version>${avro-tools.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>jul-to-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>
@@ -98,6 +112,7 @@
                 <version>${avro.version}</version>
                 <executions>
                     <execution>
+                        <id>schemas</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>schema</goal>

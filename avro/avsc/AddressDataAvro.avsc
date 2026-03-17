@@ -1,6 +1,7 @@
 {
   "type" : "record",
   "name" : "AddressDataAvro",
+  "namespace" : "com.customer.schema.avro.client",
   "fields" : [ {
     "name" : "dbId",
     "type" : "int"

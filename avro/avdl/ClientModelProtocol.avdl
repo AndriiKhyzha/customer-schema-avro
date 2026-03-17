@@ -1,4 +1,4 @@
-@namespase("com.customer.schema.avro")
+@namespace("com.customer.schema.avro.client")
 protocol ClientModelProtocol {
 
 	record CustomerDataAvro {
@@ -13,5 +13,10 @@ protocol ClientModelProtocol {
 		string city;
 		string street;
 		string number;
+	}
+
+	record CustomerDataAvroKey {
+		int dbId;
+		string name;
 	}
 }

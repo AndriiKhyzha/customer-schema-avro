@@ -1,0 +1,12 @@
+{
+  "type" : "record",
+  "name" : "CustomerDataAvroKey",
+  "namespace" : "com.customer.schema.avro.client",
+  "fields" : [ {
+    "name" : "dbId",
+    "type" : "int"
+  }, {
+    "name" : "name",
+    "type" : "string"
+  } ]
+}
