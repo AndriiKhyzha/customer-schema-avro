@@ -1,0 +1,8 @@
+package com.customer.schema.avro.helper;
+
+public class TopicNames {
+    public static final String TOPIC_NAME = "customer_test_4";
+
+    String u = "{\"type\":\"record\",\"name\":\"CustomerDataAvro\",\"fields\":[{\"name\":\"dbId\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"addresses\",\"type\":[\"null\",{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"AddressDataAvro\",\"fields\":[{\"name\":\"dbId\",\"type\":\"int\"},{\"name\":\"country\",\"type\":\"string\"},{\"name\":\"city\",\"type\":\"string\"},{\"name\":\"street\",\"type\":\"string\"},{\"name\":\"number\",\"type\":\"string\"}]}}]}]}";
+    String l = "{\"type\":\"record\",\"name\":\"CustomerDataAvroKey\",\"fields\":[{\"name\":\"dbId\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"}]}";
+}

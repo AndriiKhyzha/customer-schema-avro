@@ -1,0 +1,22 @@
+@namespace("com.customer.schema.avro.client")
+protocol ClientModelProtocol {
+
+	record CustomerDataAvro {
+		int dbId;
+		string name;
+		union { null, array<AddressDataAvro> } addresses;
+	}
+
+	record AddressDataAvro {
+		int dbId;
+		string country;
+		string city;
+		string street;
+		string number;
+	}
+
+	record CustomerDataAvroKey {
+		int dbId;
+		string name;
+	}
+}
